@@ -6,8 +6,26 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+
+  {
+    rules: {
+      "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "no-undef": "warn",
+      "no-console": "warn",
+      "no-debugger": "warn",
+
+      semi: ["warn", "always"],
+      quotes: ["warn", "double"],
+
+      "comma-dangle": ["warn", "always-multiline"],
+      "object-curly-spacing": ["warn", "always"],
+      "array-bracket-spacing": ["warn", "never"],
+      "space-before-function-paren": ["warn", "never"],
+    },
+  },
+
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
