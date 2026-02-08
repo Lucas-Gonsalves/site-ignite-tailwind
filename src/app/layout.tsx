@@ -1,15 +1,8 @@
 import "./globals.css";
-import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -21,14 +14,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en">
+      <body className={`${inter.className} antialiased`}>
+        <div className="grid-cols-app grid min-h-screen">
+          <aside className="border-r-2 border-zinc-200 px-5 py-8">
+            sidebar
+          </aside>
+          <main className="px-4 pt-8 pb-12">{children}</main>
+        </div>
       </body>
     </html>
   );
