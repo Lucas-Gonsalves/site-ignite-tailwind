@@ -2,35 +2,44 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
+import prettierConfig from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+
+  prettierConfig,
 
   {
+    plugins: {
+      prettier: prettierPlugin,
+    },
+
     rules: {
-      "no-unused-vars": "warn",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "no-undef": "warn",
-      "no-console": "warn",
-      "no-debugger": "warn",
+      "no-unused-vars": "off",
 
-      semi: ["warn", "always"],
-      quotes: ["warn", "double"],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
 
-      "comma-dangle": ["warn", "always-multiline"],
-      "object-curly-spacing": ["warn", "always"],
-      "array-bracket-spacing": ["warn", "never"],
-      "space-before-function-paren": ["warn", "never"],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/consistent-type-imports": "warn",
+      "@typescript-eslint/no-non-null-assertion": "warn",
+
+      eqeqeq: ["error", "always"],
+      "no-var": "error",
+      "prefer-const": "warn",
+
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "no-debugger": "error",
+
+      "prettier/prettier": ["warn", { endOfLine: "auto" }],
     },
   },
 
-  globalIgnores([
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ]);
 
 export default eslintConfig;
