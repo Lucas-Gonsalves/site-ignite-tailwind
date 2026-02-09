@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export function Logo() {
+export const Logo = () => {
   return (
-    <div className="flex items-center gap-2 text-xl font-semibold text-zinc-900">
+    <div className="mx-1 flex items-center gap-2 text-xl font-semibold text-zinc-900">
       <Image
         src="/logomark.svg"
         alt="Logomark do Ignite Shop"
@@ -12,4 +12,4 @@ export function Logo() {
       <span className="sr-only">Untitled UI</span>
     </div>
   );
-}
+};
