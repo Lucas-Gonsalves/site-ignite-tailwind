@@ -1,0 +1,10 @@
+import { Logo } from "./logo";
+
+export function Sidebar() {
+  return (
+    <aside className="border-r-2 border-zinc-200 px-5 py-8">
+      <Logo />
+      <div className=""></div>
+    </aside>
+  );
+}

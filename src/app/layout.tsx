@@ -3,6 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { Sidebar } from "./components/sidebar/sidebar";
+
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -21,9 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <div className="grid-cols-app grid min-h-screen">
-          <aside className="border-r-2 border-zinc-200 px-5 py-8">
-            sidebar
-          </aside>
+          <Sidebar />
           <main className="px-4 pt-8 pb-12">{children}</main>
         </div>
       </body>
