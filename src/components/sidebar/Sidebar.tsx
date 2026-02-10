@@ -2,6 +2,7 @@ import { SearchIcon } from "lucide-react";
 
 import { Input } from "../input";
 import { Logo, MainNavigation, SettingsPanel } from "./components";
+import { Profile } from "./components/profile";
 
 export const Sidebar = () => {
   return (
@@ -10,6 +11,8 @@ export const Sidebar = () => {
       <Input icon={SearchIcon} />
       <MainNavigation />
       <SettingsPanel />
+      <div className="h-px bg-zinc-200" />
+      <Profile />
     </aside>
   );
 };
