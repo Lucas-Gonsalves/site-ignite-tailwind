@@ -4,7 +4,7 @@ import type { ComponentType, SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
-export type NavItemProps = {
+type NavigationItemProps = {
   href?: string;
   title: string;
   icon: ComponentType<IconProps>;
@@ -12,13 +12,13 @@ export type NavItemProps = {
   iconHoverMode?: "none" | "color";
 };
 
-export const NavItem = ({
+export const NavigationItem = ({
   href = "",
   title,
   icon: Icon,
   chevronMode = "show",
   iconHoverMode = "none",
-}: NavItemProps) => {
+}: NavigationItemProps) => {
   const showChevronIcon = chevronMode === "show";
   const isIconHoverColor = iconHoverMode === "color";
   return (

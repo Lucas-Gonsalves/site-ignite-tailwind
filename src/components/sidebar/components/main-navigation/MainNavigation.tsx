@@ -7,17 +7,17 @@ import {
   UserIcon,
 } from "lucide-react";
 
-import { NavItem } from "../nav-item";
+import { NavigationItem } from "../navigation-item";
 
 export const MainNavigation = () => {
   return (
     <nav className="space-y-0.5">
-      <NavItem title="Home" icon={HomeIcon} />
-      <NavItem title="Dashboard" icon={BarChartIcon} />
-      <NavItem title="Projects" icon={SquareStackIcon} />
-      <NavItem title="Tasks" icon={CheckSquareIcon} />
-      <NavItem title="Reporting" icon={FlagIcon} />
-      <NavItem title="Users" icon={UserIcon} />
+      <NavigationItem title="Home" icon={HomeIcon} />
+      <NavigationItem title="Dashboard" icon={BarChartIcon} />
+      <NavigationItem title="Projects" icon={SquareStackIcon} />
+      <NavigationItem title="Tasks" icon={CheckSquareIcon} />
+      <NavigationItem title="Reporting" icon={FlagIcon} />
+      <NavigationItem title="Users" icon={UserIcon} />
     </nav>
   );
 };
