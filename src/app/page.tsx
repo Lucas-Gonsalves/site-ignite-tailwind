@@ -1,7 +1,9 @@
-export default function Home() {
+import { HomeTemplate } from "@/templates/home-template";
+
+export default function HomePage() {
   return (
     <div className="">
-      <h1 className="text-5xl font-bold">Hello world!</h1>
+      <HomeTemplate />
     </div>
   );
 }

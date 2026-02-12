@@ -1,1 +1,1 @@
-export * from "./NavigationItem";
+export * from "./navigation-item";

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { Sidebar } from "../sidebar";
+import { Sidebar } from "@/components/sidebar";
 
 type LayoutProps = {
   children?: ReactNode;
