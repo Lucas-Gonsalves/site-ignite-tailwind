@@ -1,7 +1,29 @@
-import type { ComponentProps } from "react";
+"use client";
+
+import type { ChangeEvent, ComponentProps } from "react";
+
+import { useInputFile } from "../root";
 
 type ControllProps = {} & ComponentProps<"input">;
 
 export const Controll = ({ ...rest }: ControllProps) => {
-  return <input type="file" className="sr-only" {...rest} />;
+  const { onFilesSelect } = useInputFile();
+
+  const handleFilesSelected = (event: ChangeEvent<HTMLInputElement>) => {
+    if (!event.target.files?.length) {
+      return;
+    }
+
+    const files = Array.from(event.target.files);
+    onFilesSelect(files);
+  };
+
+  return (
+    <input
+      type="file"
+      onChange={handleFilesSelected}
+      className="sr-only"
+      {...rest}
+    />
+  );
 };
