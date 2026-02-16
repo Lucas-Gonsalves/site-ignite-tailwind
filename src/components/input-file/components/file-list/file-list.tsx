@@ -1,6 +1,6 @@
 "use client";
 
-import { UploadCloudIcon } from "lucide-react";
+import { Trash2Icon, UploadCloudIcon } from "lucide-react";
 
 import { formatBytes } from "@/utils/conversion/format-bytes";
 
@@ -11,9 +11,9 @@ export const FileList = () => {
 
   return (
     <div className="flex flex-col gap-3">
-      {files.map((file) => (
+      {files.map((file, index) => (
         <div
-          key={`key-of-file-${file.name}`}
+          key={`key-of-file-${file.name}-${index}`}
           className="group flex items-start gap-4 rounded-lg border border-zinc-200 p-4"
         >
           <div className="rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600">
@@ -36,6 +36,12 @@ export const FileList = () => {
               <span className="text-sm font-medium text-zinc-700">80%</span>
             </div>
           </div>
+          <button
+            type="button"
+            className="ml-auto rounded-md p-2 hover:bg-zinc-50"
+          >
+            <Trash2Icon className="h-5 w-5 text-zinc-500" />
+          </button>
         </div>
       ))}
     </div>
