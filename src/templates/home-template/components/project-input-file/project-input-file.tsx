@@ -12,8 +12,9 @@ export const ProjectInputFile = () => {
           Share a few snippets of your work.
         </span>
       </label>
-      <InputFile.Root className="flex items-start gap-5">
+      <InputFile.Root className="flex flex-col gap-3">
         <InputFile.Trigger htmlFor="project-file" />
+        <InputFile.FileList />
         <InputFile.Controll id="project-file" multiple />
       </InputFile.Root>
     </div>

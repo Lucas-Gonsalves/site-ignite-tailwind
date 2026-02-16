@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import {
   type ComponentProps,
   createContext,
@@ -7,7 +8,9 @@ import {
   useState,
 } from "react";
 
-type RootProps = {} & ComponentProps<"div">;
+type RootProps = {
+  children: ReactNode;
+} & ComponentProps<"div">;
 
 type InputFileContextType = {
   files: File[];
@@ -16,12 +19,12 @@ type InputFileContextType = {
 
 const InputFileContext = createContext({} as InputFileContextType);
 
-export const Root = ({ ...rest }: RootProps) => {
+export const Root = ({ children, ...rest }: RootProps) => {
   const [files, setFiles] = useState<File[]>([]);
 
   return (
     <InputFileContext.Provider value={{ files, onFilesSelect: setFiles }}>
-      <div {...rest} />
+      <div {...rest}>{children}</div>
     </InputFileContext.Provider>
   );
 };
