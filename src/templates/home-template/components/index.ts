@@ -1,2 +1,4 @@
-export * from "../../../components/tabs";
-export * from "../../../components/tabs/components/tabs-item";
+export * from "./form";
+export * from "./form-body";
+export * from "./form-footer";
+export * from "./form-header";

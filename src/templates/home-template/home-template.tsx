@@ -1,6 +1,6 @@
+import { Tabs } from "@/components/tabs";
 import { SETTINGS_TABS_ROUTES } from "@/utils/info/settings-tabs-routes";
 
-import { Tabs } from "./components";
 import { Form } from "./components/form";
 
 export const HomeTemplate = () => {
