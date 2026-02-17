@@ -8,7 +8,7 @@ type InputProps = {
 
 export const Input = ({ icon: Icon, ...rest }: InputProps) => {
   return (
-    <div className="group mx-1 flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm transition-colors duration-200 focus-within:border-violet-500 hover:border-violet-500">
+    <div className="group flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm transition-colors duration-200 focus-within:border-violet-500 hover:border-violet-500">
       {Icon && (
         <Icon className="h-5 w-5 text-zinc-500 transition-colors duration-200 group-focus-within:text-violet-500" />
       )}
