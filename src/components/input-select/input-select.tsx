@@ -30,7 +30,7 @@ export const InputSelect = ({
           side="bottom"
           position="popper"
           sideOffset={8}
-          className="z-10 w-(--radix-select-trigger-width) overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm"
+          className="animate-slide-fade-t z-10 w-(--radix-select-trigger-width) overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm"
         >
           <Select.Viewport>{children}</Select.Viewport>
         </Select.Content>
