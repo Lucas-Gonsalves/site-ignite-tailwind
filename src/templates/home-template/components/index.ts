@@ -1,2 +1,2 @@
-export * from "./settings-tabs";
-export * from "./settings-tabs-item";
+export * from "../../../components/tabs";
+export * from "../../../components/tabs/components/tabs-item";

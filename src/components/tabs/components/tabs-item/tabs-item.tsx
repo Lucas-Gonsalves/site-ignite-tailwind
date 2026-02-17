@@ -3,17 +3,17 @@
 import { Trigger } from "@radix-ui/react-tabs";
 import { motion } from "framer-motion";
 
-type SettingsTabsItemProps = {
+type TabsItemProps = {
   value: string;
   title?: string;
   selected?: string;
 };
 
-export const SettingsTabsItem = ({
+export const TabsItem = ({
   value = "undefined",
   title = "Undefined",
   selected = "undefined",
-}: SettingsTabsItemProps) => {
+}: TabsItemProps) => {
   const checked = selected === value;
 
   return (
