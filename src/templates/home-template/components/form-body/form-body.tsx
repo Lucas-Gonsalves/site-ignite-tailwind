@@ -1,9 +1,17 @@
-import { MailIcon } from "lucide-react";
+import {
+  BoldIcon,
+  ItalicIcon,
+  LinkIcon,
+  ListIcon,
+  ListOrderedIcon,
+  MailIcon,
+} from "lucide-react";
 
 import { Input } from "@/components/input";
 import { InputFile } from "@/components/input-file";
 import { InputSelect } from "@/components/input-select";
 import { InputSelectItem } from "@/components/input-select/components";
+import { Textarea } from "@/components/textarea";
 
 export const FormBody = () => {
   return (
@@ -62,7 +70,7 @@ export const FormBody = () => {
           Country
         </label>
 
-        <InputSelect placeholder="Select a country">
+        <InputSelect placeholder="Select a country...">
           <InputSelectItem value="brazil" text="Brazil" />
           <InputSelectItem value="united-states" text="United States" />
         </InputSelect>
@@ -73,7 +81,7 @@ export const FormBody = () => {
           Timezone
         </label>
 
-        <InputSelect placeholder="Select a timezone">
+        <InputSelect placeholder="Select a timezone...">
           <InputSelectItem
             value="pacific"
             text="Pacific Standard Time (UTC-03:00)"
@@ -92,7 +100,57 @@ export const FormBody = () => {
             Write a short introduction.
           </span>
         </label>
-        <div></div>
+        <div className="space-y-3">
+          <div className="grid grid-cols-2 gap-3">
+            <InputSelect defaultValue="normal-text">
+              <InputSelectItem
+                defaultChecked
+                value="normal-text"
+                text="Normal Text"
+              />
+            </InputSelect>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
+              >
+                <BoldIcon className="h-4 w-4" strokeWidth={3} />
+              </button>
+
+              <button
+                type="button"
+                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
+              >
+                <ItalicIcon className="h-4 w-4" strokeWidth={3} />
+              </button>
+
+              <button
+                type="button"
+                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
+              >
+                <LinkIcon className="h-4 w-4" strokeWidth={3} />
+              </button>
+
+              <button
+                type="button"
+                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
+              >
+                <ListIcon className="h-4 w-4" strokeWidth={3} />
+              </button>
+
+              <button
+                type="button"
+                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
+              >
+                <ListOrderedIcon className="h-4 w-4" strokeWidth={3} />
+              </button>
+            </div>
+          </div>
+          <Textarea
+            id="bio"
+            defaultValue="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+          />
+        </div>
       </div>
 
       <div className="grid-cols-settings-form grid gap-3 pb-5">
