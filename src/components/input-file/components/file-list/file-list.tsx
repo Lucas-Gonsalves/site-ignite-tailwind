@@ -1,5 +1,6 @@
 "use client";
 
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Trash2Icon, UploadCloudIcon } from "lucide-react";
 
 import { formatBytes } from "@/utils/conversion/format-bytes";
@@ -8,9 +9,10 @@ import { useInputFile } from "../root";
 
 export const FileList = () => {
   const { files } = useInputFile();
+  const [parent] = useAutoAnimate();
 
   return (
-    <div className="flex flex-col gap-3">
+    <div ref={parent} className="flex flex-col gap-3">
       {files.map((file, index) => (
         <div
           key={`key-of-file-${file.name}-${index}`}
