@@ -8,7 +8,7 @@ export const Sidebar = () => {
   return (
     <aside className="flex flex-col gap-6 border-r-2 border-zinc-200 px-5 py-8">
       <Logo />
-      <Input icon={SearchIcon} />
+      <Input icon={SearchIcon} autoComplete="off" />
       <MainNavigation />
       <SettingsPanel />
       <div className="h-px bg-zinc-200" />

@@ -8,10 +8,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-violet-25: #fcfaff;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   --grid-template-columns-app: minmax(18rem, 20rem) 1fr; 
+  --grid-template-columns-settings-form: minmax(7.5rem, 17.5rem) minmax(25rem, 1fr) minmax(0, 15rem); 
 }
 
 @media (prefers-color-scheme: dark) {
