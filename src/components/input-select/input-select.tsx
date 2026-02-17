@@ -7,11 +7,13 @@ import type { ReactNode } from "react";
 type InputSelectProps = {
   children: ReactNode;
   placeholder?: string | undefined;
+  id?: string;
 } & Select.SelectProps;
 
 export const InputSelect = ({
   children,
   placeholder = "",
+  id,
   ...root
 }: InputSelectProps) => {
   return (
@@ -24,6 +26,7 @@ export const InputSelect = ({
       </Select.Trigger>
       <Select.Portal>
         <Select.Content
+          id={id}
           side="bottom"
           position="popper"
           sideOffset={8}

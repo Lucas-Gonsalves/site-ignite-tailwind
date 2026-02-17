@@ -24,8 +24,16 @@ export const FormBody = () => {
           Name
         </label>
         <div className="grid grid-cols-2 gap-6">
-          <Input id="first-name" defaultValue="Lucas" />
-          <Input id="last-name" defaultValue="Gonçalves" />
+          <Input
+            id="first-name"
+            defaultValue="Lucas"
+            autoComplete="family-name"
+          />
+          <Input
+            id="last-name"
+            defaultValue="Gonçalves"
+            autoComplete="additional-name"
+          />
         </div>
       </div>
 
@@ -38,6 +46,7 @@ export const FormBody = () => {
           type="email"
           defaultValue="lucaseluz@gmail.com"
           icon={MailIcon}
+          autoComplete="email"
         />
       </div>
 
@@ -62,26 +71,22 @@ export const FormBody = () => {
         <label htmlFor="role" className="text-sm font-medium text-zinc-700">
           Role
         </label>
-        <Input id="role" defaultValue="CTO" />
+        <Input id="role" defaultValue="CTO" autoComplete="organization" />
       </div>
 
       <div className="grid-cols-settings-form grid gap-3 pb-5">
-        <label htmlFor="country" className="text-sm font-medium text-zinc-700">
-          Country
-        </label>
+        <div className="text-sm font-medium text-zinc-700">Country</div>
 
-        <InputSelect placeholder="Select a country...">
+        <InputSelect id="country" placeholder="Select a country...">
           <InputSelectItem value="brazil" text="Brazil" />
           <InputSelectItem value="united-states" text="United States" />
         </InputSelect>
       </div>
 
       <div className="grid-cols-settings-form grid gap-3 pb-5">
-        <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">
-          Timezone
-        </label>
+        <div className="text-sm font-medium text-zinc-700">Timezone</div>
 
-        <InputSelect placeholder="Select a timezone...">
+        <InputSelect id="timezone" placeholder="Select a timezone...">
           <InputSelectItem
             value="pacific"
             text="Pacific Standard Time (UTC-03:00)"
@@ -102,7 +107,7 @@ export const FormBody = () => {
         </label>
         <div className="space-y-3">
           <div className="grid grid-cols-2 gap-3">
-            <InputSelect defaultValue="normal-text">
+            <InputSelect id="bio" defaultValue="normal-text">
               <InputSelectItem
                 defaultChecked
                 value="normal-text"
