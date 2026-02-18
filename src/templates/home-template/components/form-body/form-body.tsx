@@ -17,28 +17,37 @@ import { Textarea } from "@/components/textarea";
 export const FormBody = () => {
   return (
     <>
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label
           htmlFor="first-name"
           className="text-sm font-medium text-zinc-700"
         >
           Name
         </label>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
           <Input
             id="first-name"
             defaultValue="Lucas"
             autoComplete="family-name"
           />
-          <Input
-            id="last-name"
-            defaultValue="Gonçalves"
-            autoComplete="additional-name"
-          />
+
+          <div className="flex flex-col gap-3 lg:block">
+            <label
+              htmlFor="last-name"
+              className="text-sm font-medium text-zinc-700 lg:sr-only"
+            >
+              Last name
+            </label>
+            <Input
+              id="last-name"
+              defaultValue="Gonçalves"
+              autoComplete="additional-name"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label htmlFor="email" className="text-sm font-medium text-zinc-700">
           Email address
         </label>
@@ -51,7 +60,7 @@ export const FormBody = () => {
         />
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label
           htmlFor="file-photo"
           className="text-sm font-medium text-zinc-700"
@@ -61,21 +70,21 @@ export const FormBody = () => {
             This will be displayed on your profile.
           </span>
         </label>
-        <InputFile.Root className="flex items-start gap-5">
+        <InputFile.Root className="flex flex-col gap-5 lg:flex-row lg:items-start">
           <InputFile.ImagePreview />
           <InputFile.Trigger htmlFor="file-photo" />
           <InputFile.Controll id="file-photo" />
         </InputFile.Root>
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label htmlFor="role" className="text-sm font-medium text-zinc-700">
           Role
         </label>
         <Input id="role" defaultValue="CTO" autoComplete="organization" />
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <div className="text-sm font-medium text-zinc-700">Country</div>
 
         <InputSelect id="country" placeholder="Select a country...">
@@ -84,7 +93,7 @@ export const FormBody = () => {
         </InputSelect>
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <div className="text-sm font-medium text-zinc-700">Timezone</div>
 
         <InputSelect id="timezone" placeholder="Select a timezone...">
@@ -99,7 +108,7 @@ export const FormBody = () => {
         </InputSelect>
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
           Bio
           <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -107,7 +116,7 @@ export const FormBody = () => {
           </span>
         </label>
         <div className="space-y-3">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="flex flex-col gap-3 lg:grid lg:grid-cols-2">
             <InputSelect id="bio" defaultValue="normal-text">
               <InputSelectItem
                 defaultChecked
@@ -144,7 +153,7 @@ export const FormBody = () => {
         </div>
       </div>
 
-      <div className="grid-cols-settings-form grid gap-3 pb-5">
+      <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label
           htmlFor="project-file"
           className="text-sm font-medium text-zinc-700"
