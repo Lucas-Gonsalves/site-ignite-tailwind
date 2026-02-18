@@ -1,6 +1,6 @@
 "use client";
 
-import { List, Root } from "@radix-ui/react-tabs";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { useState } from "react";
 
 import { TabsItem } from "./components";
@@ -17,8 +17,8 @@ export const Tabs = ({ tabsList }: SettingTabsProps) => {
 
   const tabsListExists = tabsList.length > 0;
   return (
-    <Root value={selectedTab} onValueChange={setSelectedTab}>
-      <List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
+    <TabsPrimitive.Root value={selectedTab} onValueChange={setSelectedTab}>
+      <TabsPrimitive.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
         {tabsListExists &&
           tabsList.map((tab) => (
             <TabsItem
@@ -28,7 +28,7 @@ export const Tabs = ({ tabsList }: SettingTabsProps) => {
               selected={selectedTab}
             />
           ))}
-      </List>
-    </Root>
+      </TabsPrimitive.List>
+    </TabsPrimitive.Root>
   );
 };

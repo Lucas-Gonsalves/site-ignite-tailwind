@@ -1,6 +1,6 @@
 "use client";
 
-import { Trigger } from "@radix-ui/react-tabs";
+import * as Tabs from "@radix-ui/react-tabs";
 import { motion } from "framer-motion";
 
 type TabsItemProps = {
@@ -17,11 +17,13 @@ export const TabsItem = ({
   const checked = selected === value;
 
   return (
-    <Trigger
+    <Tabs.Trigger
       value={value}
-      className="relative cursor-pointer px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700"
+      className="group relative cursor-pointer px-1 pb-4 text-sm font-medium text-zinc-500 outline-none hover:text-violet-700 data-[state=active]:text-violet-700"
     >
-      <span>{title}</span>
+      <span className="rounded group-focus-visible:text-violet-500 group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-4">
+        {title}
+      </span>
 
       {checked && (
         <motion.div
@@ -29,6 +31,6 @@ export const TabsItem = ({
           className="absolute right-0 -bottom-px left-0 h-0.5 rounded-full bg-violet-700"
         />
       )}
-    </Trigger>
+    </Tabs.Trigger>
   );
 };
