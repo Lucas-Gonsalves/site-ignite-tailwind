@@ -1,6 +1,6 @@
 import type { ComponentProps, ReactNode } from "react";
-import { tv, VariantProps } from "tailwind-variants";
-
+import type { VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 const button = tv({
   base: [
@@ -12,7 +12,8 @@ const button = tv({
     variant: {
       primary: "bg-violet-600 text-white hover:bg-violet-700",
       empty: "border border-zinc-300 text-zinc-700 hover:bg-zinc-50",
-      ghost: "rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500 shadow-none"
+      ghost:
+        "rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500 shadow-none",
     },
   },
   defaultVariants: {
@@ -23,21 +24,20 @@ const button = tv({
 type ButtonProps = {
   title?: string;
   children?: ReactNode;
-} & ComponentProps<"button"> & VariantProps<typeof button>;
+} & ComponentProps<"button"> &
+  VariantProps<typeof button>;
 
 export const Button = ({
   title,
   children,
+  className,
   variant,
   ...rest
 }: ButtonProps) => {
-
   return (
-    <button className={ button({variant}) } {...rest}>
+    <button className={button({ variant, className })} {...rest}>
       {children}
-      { title && (
-        <span>{title}</span>
-      )}
+      {title && <span>{title}</span>}
     </button>
   );
 };
