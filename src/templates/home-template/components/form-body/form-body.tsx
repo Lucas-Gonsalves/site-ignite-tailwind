@@ -7,6 +7,7 @@ import {
   MailIcon,
 } from "lucide-react";
 
+import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import { InputFile } from "@/components/input-file";
 import { InputSelect } from "@/components/input-select";
@@ -115,40 +116,25 @@ export const FormBody = () => {
               />
             </InputSelect>
             <div className="flex items-center gap-1">
-              <button
-                type="button"
-                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
-              >
+              <Button type="button" variant="ghost">
                 <BoldIcon className="h-4 w-4" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button
-                type="button"
-                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
-              >
+              <Button type="button" variant="ghost">
                 <ItalicIcon className="h-4 w-4" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button
-                type="button"
-                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
-              >
+              <Button type="button" variant="ghost">
                 <LinkIcon className="h-4 w-4" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button
-                type="button"
-                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
-              >
+              <Button type="button" variant="ghost">
                 <ListIcon className="h-4 w-4" strokeWidth={3} />
-              </button>
+              </Button>
 
-              <button
-                type="button"
-                className="cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
-              >
+              <Button type="button" variant="ghost">
                 <ListOrderedIcon className="h-4 w-4" strokeWidth={3} />
-              </button>
+              </Button>
             </div>
           </div>
           <Textarea

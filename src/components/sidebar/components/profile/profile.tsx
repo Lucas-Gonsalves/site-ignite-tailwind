@@ -1,6 +1,8 @@
 import { LogOutIcon } from "lucide-react";
 import Image from "next/image";
 
+import { Button } from "@/components/button";
+
 export const Profile = () => {
   return (
     <div className="flex items-center gap-3">
@@ -19,12 +21,9 @@ export const Profile = () => {
           lucasluz1710@gmail.com
         </span>
       </div>
-      <button
-        type="button"
-        className="ml-auto cursor-pointer rounded-md p-2 text-zinc-500 transition-colors duration-200 hover:text-violet-500"
-      >
+      <Button type="button" variant="ghost">
         <LogOutIcon className="h-5 w-5" />
-      </button>
+      </Button>
     </div>
   );
 };
