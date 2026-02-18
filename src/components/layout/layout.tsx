@@ -8,9 +8,11 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="grid-cols-app grid min-h-screen">
+    <div className="lg:grid-cols-app min-h-screen lg:grid">
       <Sidebar />
-      <main className="px-4 pt-8 pb-12">{children}</main>
+      <main className="max-w-[100vw] px-4 pt-24 pb-12 lg:col-start-2 lg:px-8 lg:pt-8">
+        {children}
+      </main>
     </div>
   );
 };
