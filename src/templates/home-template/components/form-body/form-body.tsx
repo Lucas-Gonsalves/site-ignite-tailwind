@@ -20,7 +20,7 @@ export const FormBody = () => {
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label
           htmlFor="first-name"
-          className="text-sm font-medium text-zinc-700"
+          className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
         >
           Name
         </label>
@@ -34,7 +34,7 @@ export const FormBody = () => {
           <div className="flex flex-col gap-3 lg:block">
             <label
               htmlFor="last-name"
-              className="text-sm font-medium text-zinc-700 lg:sr-only"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300 lg:sr-only"
             >
               Last name
             </label>
@@ -48,7 +48,7 @@ export const FormBody = () => {
       </div>
 
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
-        <label htmlFor="email" className="text-sm font-medium text-zinc-700">
+        <label htmlFor="email" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
           Email address
         </label>
         <Input
@@ -63,7 +63,7 @@ export const FormBody = () => {
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label
           htmlFor="file-photo"
-          className="text-sm font-medium text-zinc-700"
+          className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
         >
           Your photo
           <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -78,14 +78,14 @@ export const FormBody = () => {
       </div>
 
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
-        <label htmlFor="role" className="text-sm font-medium text-zinc-700">
+        <label htmlFor="role" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
           Role
         </label>
         <Input id="role" defaultValue="CTO" autoComplete="organization" />
       </div>
 
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
-        <div className="text-sm font-medium text-zinc-700">Country</div>
+        <div className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Country</div>
 
         <InputSelect id="country" placeholder="Select a country...">
           <InputSelectItem value="brazil" text="Brazil" />
@@ -94,7 +94,7 @@ export const FormBody = () => {
       </div>
 
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
-        <div className="text-sm font-medium text-zinc-700">Timezone</div>
+        <div className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Timezone</div>
 
         <InputSelect id="timezone" placeholder="Select a timezone...">
           <InputSelectItem
@@ -109,7 +109,7 @@ export const FormBody = () => {
       </div>
 
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
-        <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
+        <label htmlFor="bio" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
           Bio
           <span className="mt-0.5 block text-sm font-normal text-zinc-500">
             Write a short introduction.
@@ -156,7 +156,7 @@ export const FormBody = () => {
       <div className="lg:grid-cols-settings-form flex flex-col gap-3 pb-5 lg:grid">
         <label
           htmlFor="project-file"
-          className="text-sm font-medium text-zinc-700"
+          className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
         >
           Portfolio projects
           <span className="mt-0.5 block text-sm font-normal text-zinc-500">

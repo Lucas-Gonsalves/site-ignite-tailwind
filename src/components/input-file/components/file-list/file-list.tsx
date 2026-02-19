@@ -14,7 +14,7 @@ export const FileList = () => {
       {files.map((file, index) => (
         <FileItem
           key={`key-of-file-${file.name}-index-${index}`}
-          state="error"
+          state="progress"
           file={file}
         />
       ))}

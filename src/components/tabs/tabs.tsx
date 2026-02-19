@@ -21,7 +21,7 @@ export const Tabs = ({ tabsList }: SettingTabsProps) => {
     <TabsPrimitive.Root value={selectedTab} onValueChange={setSelectedTab}>
       <ScrollArea.Root className="w-full" type="scroll">
         <ScrollArea.Viewport className="w-full overflow-x-scroll">
-          <TabsPrimitive.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
+          <TabsPrimitive.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200 dark:border-zinc-700">
             {tabsListExists &&
               tabsList.map((tab) => (
                 <TabsItem

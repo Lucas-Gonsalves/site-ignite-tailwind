@@ -14,10 +14,10 @@ export const Profile = () => {
         className="rounded-full"
       />
       <div className="flex max-w-45 flex-col">
-        <span className="truncate text-sm font-semibold text-ellipsis text-zinc-700">
+        <span className="truncate text-sm font-semibold text-ellipsis text-zinc-700 dark:text-zinc-100">
           Lucas Gonçalves da Luz
         </span>
-        <span className="truncate text-sm text-zinc-500">
+        <span className="truncate text-sm text-zinc-500 dark:text-zinc-400">
           lucasluz1710@gmail.com
         </span>
       </div>

@@ -10,12 +10,9 @@ import { Profile } from "./components/profile";
 
 export const Sidebar = () => {
   return (
-    <Collapssible.Root className="fixed top-0 right-0 left-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0">
+    <Collapssible.Root className="fixed top-0 right-0 left-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0 dark:border-zinc-700 dark:bg-zinc-900">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-1">
-          <Logo />
-          <h1 className="text-lg font-semibold">Untitled UI</h1>
-        </div>
+        <Logo />
         <Collapssible.Trigger asChild className="lg:hidden">
           <Button variant="ghost">
             <MenuIcon className="h-6 w-6" />
@@ -27,10 +24,10 @@ export const Sidebar = () => {
         forceMount
         className="flex flex-1 flex-col gap-6 data-[state=closed]:hidden lg:data-[state=closed]:flex"
       >
-        <Input icon={SearchIcon} autoComplete="off" />
+        <Input icon={SearchIcon} autoComplete="off" placeholder="Search..." />
         <MainNavigation />
         <SettingsPanel />
-        <div className="h-px bg-zinc-200" />
+        <div className="h-px bg-zinc-200 dark:bg-zinc-700" />
         <Profile />
       </Collapssible.Content>
     </Collapssible.Root>
